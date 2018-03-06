@@ -9,11 +9,13 @@ int main(){
 	int n;
 	cout<<"presione 1 Reloj"<<endl;
 	cout<<"presione 2 Temporizador"<<endl;
+	cout<<"presione 3 Chrono"<<endl;
 	cout<<"-->";
 	cin>> n;
 	switch(n) {
    		case 1: R1.empezar();
    		case 2: R1.temporizador();
+   		case 3: R1.chrono();
 	}
 	return 0;
 }

@@ -14,7 +14,13 @@ class Reloj{
 		int setHora(int h);
 		int setMinuto(int m);
 		int setSegundo(int s);
+		
+		int getHora();
+		int getMinuto();
+		int getSegundo();
+		
 		void temporizador();
+		void chrono();
 		void empezar();
 
 }; 
