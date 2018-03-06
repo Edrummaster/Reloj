@@ -78,10 +78,7 @@ void Reloj::temporizador(){
 
 void Reloj::empezar(){
 	while(1>0){
-	/* fecha/hora actual basado en el sistema actual */
 		time_t now = time(0);
-
-	/* Objeto de una estructura tm con fecha/hora local */
 		tm * time = localtime(&now);
 		Reloj::setSegundo(time->tm_sec);
 		Reloj::setMinuto(time->tm_min);
