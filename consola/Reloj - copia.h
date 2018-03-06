@@ -15,7 +15,7 @@ class Reloj{
 		int setMinuto(int m);
 		int setSegundo(int s);
 		void temporizador();
-		void empezar(Reloj R);
+		void empezar();
 
 }; 
 

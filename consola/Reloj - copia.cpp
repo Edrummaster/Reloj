@@ -1,4 +1,4 @@
-#include "Reloj.h"
+#include "Reloj - copia.h"
 #include <iostream>
 #include <ctime>
 #include <windows.h>
@@ -39,7 +39,7 @@ void Reloj::temporizador(){
 	cout << "ingrese los segundos: ";
 	cin >> seg;
 
-	while (ho >= 0 && min >=0 && seg > 0 ){
+	while (ho >= 0 || min >=0 || seg > 0 ){
 		if (seg== 0)
 		{
 			
@@ -62,19 +62,17 @@ void Reloj::temporizador(){
 
 }
 
-void Reloj::empezar(Reloj R){
+void Reloj::empezar(){
 	while(1>0){
 	/* fecha/hora actual basado en el sistema actual */
 		time_t now = time(0);
 
 	/* Objeto de una estructura tm con fecha/hora local */
 		tm * time = localtime(&now);
-		R.setSegundo(time->tm_sec);
-		R.setMinuto(time->tm_min);
-		R.setHora(time->tm_hour);
-		R.imprimir();
-		
-
+		Reloj::setSegundo(time->tm_sec);
+		Reloj::setMinuto(time->tm_min);
+		Reloj::setHora(time->tm_hour);
+		Reloj::imprimir();
 		system("cls");
 	}
 }
